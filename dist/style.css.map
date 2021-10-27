@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "style.css.map",
+	"sources": [
+		"../src/style.scss",
+		"../src/global/_index.scss",
+		"../src/global/boilerplate.scss"
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,IAAI,AAAC,CACD,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,UAAU,CACzB,AAED,AAAA,CAAC,CACD,CAAC,AAAA,QAAQ,CACT,CAAC,AAAA,OAAO,AAAC,CACL,UAAU,CAAE,OAAO,CACtB"
+}
