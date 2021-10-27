@@ -1,0 +1,23 @@
+{
+    "name": "modal-transitions",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AimanAnizan56/modal-transitions.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AimanAnizan56/modal-transitions/issues"
+    },
+    "homepage": "https://github.com/AimanAnizan56/modal-transitions#readme",
+    "dependencies": {
+        "node-sass": "^6.0.1"
+    }
+}
