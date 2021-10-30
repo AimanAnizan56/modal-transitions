@@ -30,4 +30,14 @@ const startServer = (cb) => {
     cb();
 };
 
-exports.default = series(styles, script, startServer);
+const reloadBrowser = (cb) => {
+    browserSync.reload();
+    cb();
+};
+
+const watchTask = () => {
+    watch('*.html', reloadBrowser);
+    watch(['src/scss/**/*.scss', 'src/js/*.js'], series(styles, script, reloadBrowser));
+};
+
+exports.default = series(styles, script, startServer, watchTask);
