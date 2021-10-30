@@ -10,7 +10,7 @@ const styles = () => {
     return src('./src/scss/style.scss', { sourcemaps: true })
         .pipe(sass())
         .pipe(postcss(plugins))
-        .pipe(dest('./dist', { sourcemaps: true }));
+        .pipe(dest('./dist', { sourcemaps: '.' }));
 };
 
 exports.default = series(styles);
