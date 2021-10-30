@@ -1,2 +1,2 @@
-"use strict";console.log("hello world");
+"use strict";var darkToggle=document.querySelector("#dark-mode-toggle");darkToggle.addEventListener("change",(function(){document.body.className=darkToggle.checked?"dark":""}));
 //# sourceMappingURL=script.js.map
