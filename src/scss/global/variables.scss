@@ -1,4 +1,22 @@
 :root {
     // font family
     --font-Nunito: 'Nunito', sans-serif;
+
+    // COLOR
+
+    // -- toggle
+    --tg-textGray: hsla(0, 0%, 0%, 0.4);
+    --tg-textGray-dark: rgb(174, 179, 203);
+    --tg-bgcolor: hsl(0, 0%, 53%);
+    --tg-bgcolor2: hsl(129, 52%, 69%);
+
+    // background
+    --bgcolor: hsl(210, 33%, 96%);
+    --bgcolor-dark: hsl(230, 17%, 14%);
+}
+
+body.dark {
+    --tg-textGray: var(--tg-textGray-dark);
+
+    --bgcolor: var(--bgcolor-dark);
 }
