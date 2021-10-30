@@ -1,0 +1,82 @@
+@use '../util/function' as *;
+.modal {
+    background: var(--modalbg);
+    max-width: rem(380);
+    height: rem(400);
+    border-radius: rem(10);
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+
+    top: rem(160);
+
+    z-index: 50;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 450ms;
+
+    > i {
+        font-size: rem(90);
+        margin-top: rem(70);
+        color: var(--modalicon);
+    }
+
+    > h1 {
+        color: var(--modalheader);
+    }
+
+    p {
+        color: var(--modaldesc);
+    }
+
+    > button {
+        all: unset;
+        background: var(--modalbtn);
+        font: inherit;
+        font-weight: 600;
+        color: var(--modalbtn-text);
+        border-radius: rem(20);
+        padding: rem(10) rem(50);
+        margin-top: rem(20);
+        cursor: pointer;
+
+        &:hover {
+            background: var(--modalbtn-hover);
+        }
+    }
+
+    // basic modal
+    &-basic {
+        /* left: 50%;
+        transform: translateX(-50%); */
+        &.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    // advance modal
+    &-advance {
+        /* transform: translateX(-50%); */
+        transform: translateY(rem(30));
+
+        &.visible {
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    // pro modal
+    &-pro {
+        transform: scale(0.5) translateY(rem(30));
+        transform-origin: 0% 0%;
+
+        &.visible {
+            transform: scale(1) translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
