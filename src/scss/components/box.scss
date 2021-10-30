@@ -1,0 +1,30 @@
+.box {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    > h1 {
+        font-size: 3.5rem;
+        margin-bottom: 7rem;
+        color: var(--btntitle);
+    }
+
+    > button {
+        all: unset;
+        font: inherit;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 1rem 1.5rem;
+        border-radius: 3rem;
+        background: var(--btncolor);
+        color: var(--btntext);
+        transition: all ease-in-out 200ms;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--btncolor-hover);
+        }
+    }
+}
