@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
+const browserSync = require('browser-sync');
 
 const styles = () => {
     const plugins = [autoprefixer(), cssnano()];
@@ -22,4 +23,11 @@ const script = () => {
         .pipe(dest('./dist', { sourcemaps: '.' }));
 };
 
-exports.default = series(styles, script);
+const startServer = (cb) => {
+    browserSync.init({
+        server: '.',
+    });
+    cb();
+};
+
+exports.default = series(styles, script, startServer);
