@@ -29,3 +29,19 @@ body {
         position: relative;
     }
 }
+
+#footer {
+    background: var(--footercolor);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+
+    &.opened {
+        visibility: visible;
+        opacity: 1;
+    }
+}
