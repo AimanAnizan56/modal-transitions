@@ -13,4 +13,10 @@ const styles = () => {
         .pipe(dest('./dist', { sourcemaps: '.' }));
 };
 
-exports.default = series(styles);
+const script = (cb) => {
+    return src('./src/js/script.js', { sourcemaps: true }).pipe(
+        dest('./dist', { sourcemaps: '.' })
+    );
+};
+
+exports.default = series(styles, script);
