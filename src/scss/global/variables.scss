@@ -8,7 +8,7 @@
     --tg-textGray: hsla(0, 0%, 0%, 0.4);
     --tg-textGray-dark: rgb(174, 179, 203);
     --tg-bgcolor: hsl(0, 0%, 53%);
-    --tg-bgcolor2: hsl(129, 52%, 69%);
+    --tg-bgcolor2: hsl(129, 62%, 62%);
 
     // background
     --bgcolor: hsl(210, 33%, 96%);
@@ -26,6 +26,32 @@
 
     --btntext: hsl(0, 0%, 100%);
     --btntext-dark: hsl(0, 0%, 85%);
+
+    // footer
+    --footercolor: rgba(0, 0, 0, 0.3);
+    --footercolor-dark: rgba(0, 0, 0, 0);
+
+    // modal
+    --modalbg: rgb(243, 243, 243);
+    --modalbg-dark: hsl(230, 17%, 27%);
+
+    --modalicon: hsl(129, 62%, 62%);
+    --modalicon-dark: hsl(129, 55%, 62%);
+
+    --modalheader: hsl(0, 0%, 0%);
+    --modalheader-dark: hsl(0, 0%, 90%);
+
+    --modaldesc: hsl(0, 0%, 50%);
+    --modaldesc-dark: hsl(0, 0%, 76%);
+
+    --modalbtn: hsl(0, 0%, 50%);
+    --modalbtn-dark: hsl(0, 0%, 90%);
+
+    --modalbtn-hover: hsl(0, 0%, 42%);
+    --modalbtn-hover-dark: hsl(0, 0%, 80%);
+
+    --modalbtn-text: hsl(0, 0%, 100%);
+    --modalbtn-text-dark: hsl(0, 0%, 27%);
 }
 
 body.dark {
@@ -41,4 +67,16 @@ body.dark {
     --btncolor: var(--btncolor-dark);
     --btncolor-hover: var(--btncolor-hover-dark);
     --btntext: var(--btntext-dark);
+
+    // footer
+    --footercolor: var(--footercolor-dark);
+
+    // modal
+    --modalbg: var(--modalbg-dark);
+    --modalicon: var(--modalicon-dark);
+    --modalheader: var(--modalheader-dark);
+    --modaldesc: var(--modaldesc-dark);
+    --modalbtn: var(--modalbtn-dark);
+    --modalbtn-hover: var(--modalbtn-hover-dark);
+    --modalbtn-text: var(--modalbtn-text-dark);
 }
