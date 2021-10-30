@@ -18,6 +18,8 @@
     },
     "homepage": "https://github.com/AimanAnizan56/modal-transitions#readme",
     "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.0",
         "autoprefixer": "^10.4.0",
         "browser-sync": "^2.27.7",
         "cssnano": "^5.0.8",
@@ -28,6 +30,5 @@
         "gulp-terser": "^2.1.0",
         "postcss": "^8.3.11",
         "sass": "^1.43.4"
-    },
-    "dependencies": {}
+    }
 }
