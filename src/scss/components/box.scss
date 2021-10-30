@@ -30,3 +30,8 @@
         }
     }
 }
+
+section > :not(.box) {
+    height: 100vh;
+    padding: 0 rem(30);
+}
