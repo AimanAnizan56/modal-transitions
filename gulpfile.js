@@ -5,6 +5,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const babel = require('gulp-babel');
+const terser = require('gulp-terser');
 
 const styles = () => {
     const plugins = [autoprefixer(), cssnano()];
@@ -14,9 +15,10 @@ const styles = () => {
         .pipe(dest('./dist', { sourcemaps: '.' }));
 };
 
-const script = (cb) => {
+const script = () => {
     return src('./src/js/script.js', { sourcemaps: true })
         .pipe(babel({ presets: ['@babel/preset-env'] }))
+        .pipe(terser())
         .pipe(dest('./dist', { sourcemaps: '.' }));
 };
 
