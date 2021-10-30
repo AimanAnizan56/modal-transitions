@@ -13,10 +13,32 @@
     // background
     --bgcolor: hsl(210, 33%, 96%);
     --bgcolor-dark: hsl(230, 17%, 14%);
+
+    // button
+    --btntitle-light: hsl(0, 0%, 35%);
+    --btntitle-dark: hsl(0, 0%, 80%);
+
+    --btncolor: hsl(262, 97%, 61%);
+    --btncolor-dark: hsl(262, 80%, 55%);
+
+    --btncolor-hover: hsl(262, 100%, 55%);
+    --btncolor-hover-dark: hsl(262, 85%, 48%);
+
+    --btntext: hsl(0, 0%, 100%);
+    --btntext-dark: hsl(0, 0%, 85%);
 }
 
 body.dark {
+    transition: all ease-in-out 500ms;
+    // toggle
     --tg-textGray: var(--tg-textGray-dark);
 
+    // background
     --bgcolor: var(--bgcolor-dark);
+
+    // button
+    --btntitle: var(--btntitle-dark);
+    --btncolor: var(--btncolor-dark);
+    --btncolor-hover: var(--btncolor-hover-dark);
+    --btntext: var(--btntext-dark);
 }
