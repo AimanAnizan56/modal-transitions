@@ -17,7 +17,5 @@
         "url": "https://github.com/AimanAnizan56/modal-transitions/issues"
     },
     "homepage": "https://github.com/AimanAnizan56/modal-transitions#readme",
-    "dependencies": {
-        "node-sass": "^6.0.1"
-    }
+    "devDependencies": {}
 }
