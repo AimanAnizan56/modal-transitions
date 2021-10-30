@@ -5,8 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Modal Transitions</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./dist/style.css" />
         <script defer src="./dist/script.js"></script>
     </head>
-    <body></body>
+    <body>
+        <ul class="toggle-list">
+            <li class="toggle-list-item">
+                <h4>Dark Mode</h4>
+                <input class="toggle toggle-skewed" id="dark-mode" type="checkbox" />
+                <label
+                    class="toggle-btn"
+                    data-toggle-off="OFF"
+                    data-toggle-on="ON"
+                    for="dark-mode"
+                ></label>
+            </li>
+        </ul>
+    </body>
 </html>
