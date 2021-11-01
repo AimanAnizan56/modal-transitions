@@ -2,23 +2,33 @@ const darkToggle = document.querySelector('#dark-mode-toggle');
 const button = document.querySelectorAll('.box > button');
 const footer = document.querySelector('#footer');
 const modalbtn = document.querySelectorAll('.modal > button');
+const body = document.body;
 
 darkToggle.addEventListener('change', () => {
     document.body.className = darkToggle.checked ? 'dark' : '';
+    localStorage.setItem('colorMode', body.className);
 });
 
 window.addEventListener('scroll', () => {
     document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
 });
 
+const getLocalStorage = () => {
+    const colorMode = localStorage.getItem('colorMode');
+    if (colorMode != null && colorMode === 'dark') {
+        darkToggle.checked = true;
+        body.className = colorMode;
+    } else if (colorMode == null) {
+        localStorage.setItem('colorMode', body.className);
+    }
+};
+
 const disableScrolling = () => {
-    const body = document.body;
     body.style.height = '100vh';
     body.style.overflowY = 'hidden';
 };
 
 const enableScrolling = () => {
-    const body = document.body;
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     body.style.position = '';
     body.style.top = '';
@@ -46,3 +56,5 @@ for (let i = 0; i < button.length; i++) {
         enableScrolling();
     });
 }
+
+getLocalStorage();
