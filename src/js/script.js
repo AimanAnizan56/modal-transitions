@@ -9,6 +9,10 @@ darkToggle.addEventListener('change', () => {
     localStorage.setItem('colorMode', body.className);
 });
 
+window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
+
 const getLocalStorage = () => {
     const colorMode = localStorage.getItem('colorMode');
     if (colorMode != null && colorMode === 'dark') {
@@ -20,11 +24,17 @@ const getLocalStorage = () => {
 };
 
 const disableScrolling = () => {
+    body.style.height = '100vh';
     body.style.overflowY = 'hidden';
 };
 
 const enableScrolling = () => {
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    body.style.position = '';
+    body.style.top = '';
+    body.style.height = '';
     body.style.overflowY = '';
+    window.scrollTo(0, parseInt(scrollY || '0'));
 };
 
 for (let i = 0; i < button.length; i++) {
